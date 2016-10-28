@@ -7,8 +7,6 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-#undef gnu_io_LPRPort_debug
-#define gnu_io_LPRPort_debug 0L
 #undef gnu_io_LPRPort_LPT_MODE_ANY
 #define gnu_io_LPRPort_LPT_MODE_ANY 0L
 #undef gnu_io_LPRPort_LPT_MODE_SPP
@@ -29,59 +27,63 @@ extern "C" {
  * Signature: ()V
  */
 JNIEXPORT void JNICALL Java_gnu_io_LPRPort_Initialize
-(JNIEnv *, jclass);
+  (JNIEnv *, jclass);
 
 /*
  * Class:     gnu_io_LPRPort
  * Method:    open
  * Signature: (Ljava/lang/String;)I
  */
-JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_open(JNIEnv *, jobject, jstring);
+JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_open
+  (JNIEnv *, jobject, jstring);
 
 /*
  * Class:     gnu_io_LPRPort
  * Method:    setLPRMode
  * Signature: (I)Z
  */
-JNIEXPORT jboolean JNICALL Java_gnu_io_LPRPort_setLPRMode(JNIEnv *, jobject,
-		jint);
+JNIEXPORT jboolean JNICALL Java_gnu_io_LPRPort_setLPRMode
+  (JNIEnv *, jobject, jint);
 
 /*
  * Class:     gnu_io_LPRPort
  * Method:    isPaperOut
  * Signature: ()Z
  */
-JNIEXPORT jboolean JNICALL Java_gnu_io_LPRPort_isPaperOut(JNIEnv *, jobject);
+JNIEXPORT jboolean JNICALL Java_gnu_io_LPRPort_isPaperOut
+  (JNIEnv *, jobject);
 
 /*
  * Class:     gnu_io_LPRPort
  * Method:    isPrinterBusy
  * Signature: ()Z
  */
-JNIEXPORT jboolean JNICALL Java_gnu_io_LPRPort_isPrinterBusy(JNIEnv *, jobject);
+JNIEXPORT jboolean JNICALL Java_gnu_io_LPRPort_isPrinterBusy
+  (JNIEnv *, jobject);
 
 /*
  * Class:     gnu_io_LPRPort
  * Method:    isPrinterError
  * Signature: ()Z
  */
-JNIEXPORT jboolean JNICALL Java_gnu_io_LPRPort_isPrinterError(JNIEnv *, jobject);
+JNIEXPORT jboolean JNICALL Java_gnu_io_LPRPort_isPrinterError
+  (JNIEnv *, jobject);
 
 /*
  * Class:     gnu_io_LPRPort
  * Method:    isPrinterSelected
  * Signature: ()Z
  */
-JNIEXPORT jboolean JNICALL Java_gnu_io_LPRPort_isPrinterSelected(JNIEnv *,
-		jobject);
+JNIEXPORT jboolean JNICALL Java_gnu_io_LPRPort_isPrinterSelected
+  (JNIEnv *, jobject);
 
 /*
  * Class:     gnu_io_LPRPort
  * Method:    isPrinterTimedOut
  * Signature: ()Z
  */
-JNIEXPORT jboolean JNICALL Java_gnu_io_LPRPort_isPrinterTimedOut(JNIEnv *,
-		jobject);
+JNIEXPORT jboolean JNICALL Java_gnu_io_LPRPort_isPrinterTimedOut
+  (JNIEnv *, jobject);
 
 /*
  * Class:     gnu_io_LPRPort
@@ -89,7 +91,7 @@ JNIEXPORT jboolean JNICALL Java_gnu_io_LPRPort_isPrinterTimedOut(JNIEnv *,
  * Signature: ()V
  */
 JNIEXPORT void JNICALL Java_gnu_io_LPRPort_nativeClose
-(JNIEnv *, jobject);
+  (JNIEnv *, jobject);
 
 /*
  * Class:     gnu_io_LPRPort
@@ -97,14 +99,15 @@ JNIEXPORT void JNICALL Java_gnu_io_LPRPort_nativeClose
  * Signature: (I)V
  */
 JNIEXPORT void JNICALL Java_gnu_io_LPRPort_setInputBufferSize
-(JNIEnv *, jobject, jint);
+  (JNIEnv *, jobject, jint);
 
 /*
  * Class:     gnu_io_LPRPort
  * Method:    getInputBufferSize
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_getInputBufferSize(JNIEnv *, jobject);
+JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_getInputBufferSize
+  (JNIEnv *, jobject);
 
 /*
  * Class:     gnu_io_LPRPort
@@ -112,23 +115,23 @@ JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_getInputBufferSize(JNIEnv *, jobject)
  * Signature: (I)V
  */
 JNIEXPORT void JNICALL Java_gnu_io_LPRPort_setOutputBufferSize
-(JNIEnv *, jobject, jint);
+  (JNIEnv *, jobject, jint);
 
 /*
  * Class:     gnu_io_LPRPort
  * Method:    getOutputBufferSize
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_getOutputBufferSize(JNIEnv *,
-		jobject);
+JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_getOutputBufferSize
+  (JNIEnv *, jobject);
 
 /*
  * Class:     gnu_io_LPRPort
  * Method:    getOutputBufferFree
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_getOutputBufferFree(JNIEnv *,
-		jobject);
+JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_getOutputBufferFree
+  (JNIEnv *, jobject);
 
 /*
  * Class:     gnu_io_LPRPort
@@ -136,7 +139,7 @@ JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_getOutputBufferFree(JNIEnv *,
  * Signature: (I)V
  */
 JNIEXPORT void JNICALL Java_gnu_io_LPRPort_writeByte
-(JNIEnv *, jobject, jint);
+  (JNIEnv *, jobject, jint);
 
 /*
  * Class:     gnu_io_LPRPort
@@ -144,7 +147,7 @@ JNIEXPORT void JNICALL Java_gnu_io_LPRPort_writeByte
  * Signature: ([BII)V
  */
 JNIEXPORT void JNICALL Java_gnu_io_LPRPort_writeArray
-(JNIEnv *, jobject, jbyteArray, jint, jint);
+  (JNIEnv *, jobject, jbyteArray, jint, jint);
 
 /*
  * Class:     gnu_io_LPRPort
@@ -152,29 +155,31 @@ JNIEXPORT void JNICALL Java_gnu_io_LPRPort_writeArray
  * Signature: ()V
  */
 JNIEXPORT void JNICALL Java_gnu_io_LPRPort_drain
-(JNIEnv *, jobject);
+  (JNIEnv *, jobject);
 
 /*
  * Class:     gnu_io_LPRPort
  * Method:    nativeavailable
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_nativeavailable(JNIEnv *, jobject);
+JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_nativeavailable
+  (JNIEnv *, jobject);
 
 /*
  * Class:     gnu_io_LPRPort
  * Method:    readByte
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_readByte(JNIEnv *, jobject);
+JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_readByte
+  (JNIEnv *, jobject);
 
 /*
  * Class:     gnu_io_LPRPort
  * Method:    readArray
  * Signature: ([BII)I
  */
-JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_readArray(JNIEnv *, jobject,
-		jbyteArray, jint, jint);
+JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_readArray
+  (JNIEnv *, jobject, jbyteArray, jint, jint);
 
 /*
  * Class:     gnu_io_LPRPort
@@ -182,7 +187,7 @@ JNIEXPORT jint JNICALL Java_gnu_io_LPRPort_readArray(JNIEnv *, jobject,
  * Signature: ()V
  */
 JNIEXPORT void JNICALL Java_gnu_io_LPRPort_eventLoop
-(JNIEnv *, jobject);
+  (JNIEnv *, jobject);
 
 #ifdef __cplusplus
 }
